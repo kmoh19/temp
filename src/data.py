@@ -63,7 +63,7 @@ if __name__ == "__main__":
     df_http = get_df_http()
     print('All loading done!')
 
-    # Save the CSV file (for generative models)
+    #  Save the CSV file (for generative models)
     dfs = [df_cyner, df_cynews, df_secmmlu,
            df_cyquiz, df_mitre, df_cve, df_web, df_email, df_http]
     columns = ['task', 'dataset', 'instruction', 'input', 'output', 'split']
