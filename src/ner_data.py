@@ -194,7 +194,7 @@ def load_cyner_data(cyner_folder, split):
     Load CyNER data
     """
     split_path = os.path.join(cyner_folder, f'{split}.txt')
-    with open(split_path, 'r') as file:
+    with open(split_path, 'r', encoding = 'utf-8') as file:
         lines = file.read().splitlines()
 
     tokens = [[]]

@@ -23,6 +23,7 @@ def split_dataset(df, train_size=train_size, val_size=val_size, test_size=test_s
     """
     Split the dataset and add a "split" column
     """
+    df.dropna(inplace=True)
     if stratify:
         # Stratified sampling with labels
         df_train, df_val_test = train_test_split(

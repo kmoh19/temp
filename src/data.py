@@ -20,8 +20,8 @@ if __name__ == "__main__":
     # Download datasets
     print('Downloading CyNER ...')
     download_cyner()
-    print('Downloading APTNER ...')
-    download_aptner()
+    #print('Downloading APTNER ...')
+    #download_aptner()
     print('Downloading CyNews ...')
     download_cynews()
     print('Downloading SecMMLU ...')
@@ -43,8 +43,8 @@ if __name__ == "__main__":
     # Collect datasets
     print('Loading CyNER ...')
     df_cyner = get_df_cyner()
-    print('Loading APTNER ...')
-    df_aptner = get_df_aptner()
+    #print('Loading APTNER ...')
+    #df_aptner = get_df_aptner()
     print('Loading CyNews ...')
     df_cynews = get_df_cynews()
     print('Loading SecMMLU ...')
@@ -64,7 +64,7 @@ if __name__ == "__main__":
     print('All loading done!')
 
     # Save the CSV file (for generative models)
-    dfs = [df_cyner, df_aptner, df_cynews, df_secmmlu,
+    dfs = [df_cyner, df_cynews, df_secmmlu,
            df_cyquiz, df_mitre, df_cve, df_web, df_email, df_http]
     columns = ['task', 'dataset', 'instruction', 'input', 'output', 'split']
     df_all = pd.concat([df[columns] for df in dfs], ignore_index=True)
