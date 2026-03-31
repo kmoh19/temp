@@ -1,5 +1,5 @@
 from openai import OpenAI
-
+#https://guardrail-2026.cognitiveservices.azure.com/
 endpoint = "https://guardrail-2026.services.ai.azure.com/openai/v1/"
 model_name = "Kimi-K2.5"
 deployment_name = "Kimi-K2.5"
